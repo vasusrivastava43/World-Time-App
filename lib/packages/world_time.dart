@@ -15,7 +15,7 @@ class Worldtime {
     try{
   final response=await http.get(Uri.parse('http://worldtimeapi.org/api/timezone/$url'));
   Map data=json.decode(response.body);
-  print(data);
+  //print(data);
 
   //get properties from data
   String datetime=data['datetime'];
@@ -23,9 +23,9 @@ class Worldtime {
   // print(datetime);
   // print(offset);
   DateTime now=DateTime.parse(datetime);
-  print(now);
+  //print(now);
   now=now.add(Duration(hours: int.parse(offset)));
-  print(now);
+  //print(now);
   //print(now);
   time=DateFormat.jm().format(now);
   // time=now;
